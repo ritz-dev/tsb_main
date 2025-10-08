@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tsb_main/frame/button/language_button.dart';
 import 'package:tsb_main/frame/navigation/bottom_navigation_frame.dart';
 import 'package:tsb_main/utils/localization/app_localizations.dart';
+import 'package:tsb_mini/frame/app_bar/credit_app_bar.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -24,18 +25,18 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       extendBody: true,
       backgroundColor: const Color(0xFF0A4DA2), // blue background
-      // appBar: CreditHomeAppBar(
-      //   title: AppLocalizations.of(context)!.translate('settings'),
-      //   enableBack: false,
-      // ),
-      appBar: AppBar(
-        title: Text(
-          AppLocalizations.of(context)!.translate('settings'),
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+      appBar: CreditHomeAppBar(
+        title: AppLocalizations.of(context)!.translate('settings'),
+        enableBack: false,
       ),
+      // appBar: AppBar(
+      //   title: Text(
+      //     AppLocalizations.of(context)!.translate('settings'),
+      //     style: const TextStyle(fontWeight: FontWeight.bold),
+      //   ),
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      // ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
         child: Container(

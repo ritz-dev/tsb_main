@@ -482,6 +482,24 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.6"
+  tree_circle_progress:
+    dependency: transitive
+    description:
+      path: "."
+      ref: tree_circle_progress
+      resolved-ref: d5c5402c91f279f42e3ac5d06576799659d0332e
+      url: "https://github.com/ritz-dev/tree_circle_progress.git"
+    source: git
+    version: "1.0.0"
+  tsb_mini:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: staging
+      resolved-ref: "0c394777dd107bd4c19453364a3f7f08175d208d"
+      url: "https://github.com/ritz-dev/tsb_mini.git"
+    source: git
+    version: "1.0.0+1"
   typed_data:
     dependency: transitive
     description:

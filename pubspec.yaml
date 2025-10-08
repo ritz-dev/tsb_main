@@ -23,6 +23,12 @@ dependencies:
   equatable: ^2.0.5
   shared_preferences: ^2.3.2 
 
+
+  tsb_mini: 
+    git:
+      url: https://github.com/ritz-dev/tsb_mini.git
+      ref: staging
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

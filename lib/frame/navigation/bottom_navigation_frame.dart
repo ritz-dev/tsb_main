@@ -4,6 +4,7 @@ import 'package:tsb_main/screen/pass_main.dart';
 import 'package:tsb_main/screen/setting_page.dart';
 import 'package:tsb_main/theme/color_theme.dart';
 import 'package:tsb_main/utils/localization/app_localizations.dart';
+import 'package:tsb_mini/screen/home/home_page.dart';
 
 
 class BottomNavigationFrame extends StatelessWidget {
@@ -36,13 +37,13 @@ class BottomNavigationFrame extends StatelessWidget {
         );
         break;
      case 2:
-        // Navigator.pushReplacement(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (_) =>
-        //         RewardPage(localize: localize ?? AppLocalizations.of(context)!),
-        //   ),
-        // );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (_) =>
+                RewardPage(localize: localize ?? AppLocalizations.of(context)!),
+          ),
+        );
         break;
       case 3:
          Navigator.pushReplacement(

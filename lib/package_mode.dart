@@ -10,7 +10,7 @@ class PackageAssets {
       width: width,
       height: height,
       color: color,
-      package: _isInPackage ? null : 'carbon_credit',
+      package: _isInPackage ? null : 'tsb_main',
     );
   }
 
@@ -25,7 +25,7 @@ class PackageAssets {
       width: width,
       height: height,
       color: color,
-      package: _isInPackage ? null : 'carbon_credit',
+      package: _isInPackage ? null : 'tsb_main',
     );
   }
 
