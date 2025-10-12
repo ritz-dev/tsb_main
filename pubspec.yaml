@@ -46,6 +46,7 @@ flutter:
       - assets/bottom_image/reward.png
       - assets/image/hop2.png
       - assets/lang/
+      - assets/logo/
 
   fonts:
     - family: FCIconic
