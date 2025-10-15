@@ -27,7 +27,7 @@ dependencies:
   tsb_mini: 
     git:
       url: https://github.com/ritz-dev/tsb_mini.git
-      ref: staging
+      ref: main
 
 dev_dependencies:
   flutter_test:
