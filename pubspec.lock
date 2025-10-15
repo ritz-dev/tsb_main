@@ -496,7 +496,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "0a745b52ddae9cb346dabc3ac8ef74fd563f1ca7"
+      resolved-ref: ecfe8a2aca7ca48c5c3d0b3d0a5d8660504f40af
       url: "https://github.com/ritz-dev/tsb_mini.git"
     source: git
     version: "1.0.0+1"
