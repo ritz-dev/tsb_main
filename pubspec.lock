@@ -496,7 +496,7 @@ packages:
     description:
       path: "."
       ref: staging
-      resolved-ref: "5f3d64bade0a1204717031b3ac713111e72ab73d"
+      resolved-ref: b2a309966a03a56525f58670822c45f1fa51e61f
       url: "https://github.com/ritz-dev/tsb_mini.git"
     source: git
     version: "1.0.0+1"
