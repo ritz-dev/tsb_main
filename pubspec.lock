@@ -197,6 +197,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.20.2"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      sha256: "53385261521cc4a0c4658fd0ad07a7d14591cf8fc33abbceae306ddb974888dc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.2"
   leak_tracker:
     dependency: transitive
     description:
@@ -253,6 +261,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.16.0"
+  mobile_scanner:
+    dependency: transitive
+    description:
+      name: mobile_scanner
+      sha256: "1b60b8f9d4ce0cb0e7d7bc223c955d083a0737bee66fa1fcfe5de48225e0d5b3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.5.7"
   nested:
     dependency: transitive
     description:
@@ -487,7 +503,7 @@ packages:
     description:
       path: "."
       ref: tree_circle_progress
-      resolved-ref: d5c5402c91f279f42e3ac5d06576799659d0332e
+      resolved-ref: ab19eafb167ef9ad89988d771878e421a83166e6
       url: "https://github.com/ritz-dev/tree_circle_progress.git"
     source: git
     version: "1.0.0"
@@ -496,7 +512,7 @@ packages:
     description:
       path: "."
       ref: staging
-      resolved-ref: "2320e401e9519708b5791a255dc22f4b56d35d3f"
+      resolved-ref: b20595058f1e1d65433ba5de22854e347c12e72e
       url: "https://github.com/ritz-dev/tsb_mini.git"
     source: git
     version: "1.0.0+1"
