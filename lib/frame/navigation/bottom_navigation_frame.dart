@@ -69,6 +69,7 @@ class BottomNavigationFrame extends StatelessWidget {
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xFF083f8c) : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
+
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -103,10 +104,10 @@ class BottomNavigationFrame extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
       decoration: BoxDecoration(
         color: MainAppColors.mainAppBottomNav,
-        // borderRadius: const BorderRadius.only(
-        //   topLeft: Radius.circular(20),
-        //   topRight: Radius.circular(20),
-        // ),
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
