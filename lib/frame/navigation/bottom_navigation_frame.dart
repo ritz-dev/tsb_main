@@ -65,10 +65,10 @@ class BottomNavigationFrame extends StatelessWidget {
     return GestureDetector(
       onTap: () => _handleNavigation(context, index),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal:6),
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xFF083f8c) : Colors.transparent,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(18),
 
         ),
         child: Column(
@@ -101,12 +101,12 @@ class BottomNavigationFrame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+      padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
       decoration: BoxDecoration(
         color: MainAppColors.mainAppBottomNav,
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+          topLeft: Radius.circular(26),
+          topRight: Radius.circular(26),
         ),
         boxShadow: [
           BoxShadow(
