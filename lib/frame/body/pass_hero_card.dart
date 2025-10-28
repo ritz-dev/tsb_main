@@ -29,68 +29,77 @@ class _PassHeroCardState extends State<PassHeroCard> {
 
   @override
   Widget build(BuildContext context) {
+    
     final screenWidth = MediaQuery.of(context).size.width;
-    return Column(
-      children: [
-        SizedBox(
-          height: widget.cardHeight,
-          child: PageView.builder(
-            controller: _pageController,
-            itemCount: widget.imagePaths.length,
-            onPageChanged: (index) {
-              setState(() => _currentPage = index);
-            },
-            itemBuilder: (context, index) {
-              return Center(
-                child: Container(
-                  width: widget.cardWidth * 1.2,
-                  height: widget.cardHeight * 0.9,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.05),
-                        blurRadius: 10,
-                        spreadRadius: 0,
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(screenWidth * 0.02),
-                    child: ClipRRect(
+    return Container(
+      decoration: const BoxDecoration(
+        color: Color(0XFF083F8C)
+      ),
+      child: Column(
+        children: [
+          SizedBox(
+            height: widget.cardHeight,
+            child: PageView.builder(
+              controller: _pageController,
+              itemCount: widget.imagePaths.length,
+              onPageChanged: (index) {
+                setState(() => _currentPage = index);
+              },
+              itemBuilder: (context, index) {
+                return Center(
+                  child: Container(
+                    width: widget.cardWidth * 1.2,
+                    height: widget.cardHeight * 0.9,
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      child: PackageAssets.image(
-                        widget.imagePaths[index],
-                        fit: BoxFit.contain,
-                        width: widget.cardWidth * 1.2,
-                        height: widget.cardHeight * 0.78,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.05),
+                          blurRadius: 10,
+                          spreadRadius: 0,
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(screenWidth * 0.02),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: PackageAssets.image(
+                          widget.imagePaths[index],
+                          fit: BoxFit.contain,
+                          width: widget.cardWidth * 1.2,
+                          height: widget.cardHeight * 0.78,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
-        ),
-        SizedBox(height: screenWidth * 0.03),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(
-            widget.imagePaths.length,
-            (index) => Container(
-              margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.01),
-              width: _currentPage == index ? screenWidth * 0.025 : screenWidth * 0.02,
-              height: _currentPage == index ? screenWidth * 0.025 : screenWidth * 0.02,
-              decoration: BoxDecoration(
-                color: _currentPage == index
-                    ? Colors.white
-                    : Colors.white.withOpacity(0.4),
-                shape: BoxShape.circle,
+          SizedBox(height: screenWidth * 0.03),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                widget.imagePaths.length,
+                (index) => Container(
+                  margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.01),
+                  width: _currentPage == index ? screenWidth * 0.025 : screenWidth * 0.02,
+                  height: _currentPage == index ? screenWidth * 0.025 : screenWidth * 0.02,
+                  decoration: BoxDecoration(
+                    color: _currentPage == index
+                        ? Colors.white
+                        : Colors.white.withOpacity(0.4),
+                    shape: BoxShape.circle,
+                  ),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

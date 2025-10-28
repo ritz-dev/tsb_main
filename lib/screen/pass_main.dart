@@ -62,11 +62,11 @@ class _CarbonPassingPageState extends State<CarbonPassingPage> {
     final screenHeight = media.size.height;
     final screenWidth = media.size.width;
 
-    final heroCardHeight = screenHeight * 0.28;
+    final heroCardHeight = screenHeight * 0.29;
     final topSpacing = screenHeight * 0.03;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF083F8B),
+      backgroundColor: Colors.white,
       appBar: PaassAppBar(
         title: localize.translate('pass'),
         showDrawer: true,

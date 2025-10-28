@@ -25,7 +25,7 @@ class GridViewFrame extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: Colors.white,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
