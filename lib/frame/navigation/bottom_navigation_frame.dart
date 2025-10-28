@@ -6,7 +6,6 @@ import 'package:tsb_main/theme/color_theme.dart';
 import 'package:tsb_main/utils/localization/app_localizations.dart';
 import 'package:tsb_mini/screen/home/home_page.dart';
 
-
 class BottomNavigationFrame extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
@@ -22,10 +21,10 @@ class BottomNavigationFrame extends StatelessWidget {
   void _handleNavigation(BuildContext context, int index) {
     onItemTapped(index);
 
-    // page navigation switch
+    // Page navigation switch
     switch (index) {
       case 0:
-         Navigator.pushReplacement(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => CarbonPassingPage()),
         );
@@ -36,7 +35,7 @@ class BottomNavigationFrame extends StatelessWidget {
           MaterialPageRoute(builder: (_) => CarbonPassingPage()),
         );
         break;
-     case 2:
+      case 2:
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -46,7 +45,7 @@ class BottomNavigationFrame extends StatelessWidget {
         );
         break;
       case 3:
-         Navigator.pushReplacement(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => SettingsPage()),
         );
@@ -65,11 +64,10 @@ class BottomNavigationFrame extends StatelessWidget {
     return GestureDetector(
       onTap: () => _handleNavigation(context, index),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 8, horizontal:6),
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xFF083f8c) : Colors.transparent,
           borderRadius: BorderRadius.circular(18),
-
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -78,11 +76,6 @@ class BottomNavigationFrame extends StatelessWidget {
               iconPath,
               color: isSelected ? Colors.white : Colors.black,
             ),
-            // ImageIcon(
-            //   AssetImage(iconPath),
-            //   size: 28,
-            //   color: isSelected ? Colors.white : Colors.black,
-            // ),
             const SizedBox(height: 4),
             Text(
               label,
@@ -100,56 +93,62 @@ class BottomNavigationFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
-      decoration: BoxDecoration(
-        color: MainAppColors.mainAppBottomNav,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(26),
-          topRight: Radius.circular(26),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 5,
-          ),
-        ],
+    return ClipRRect(
+      borderRadius: const BorderRadius.only(
+        topLeft: Radius.circular(26),
+        topRight: Radius.circular(26),
       ),
-      child: Row(
-        children: [
-          Expanded(
-            child: _buildNavItem(
-              context,
-              'TRANSPORT',
-              'assets/bottom_image/vector.png',
-              0,
+      child: Container(
+        color: Colors.white, // ensures no unwanted background
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
+          decoration: BoxDecoration(
+            color: MainAppColors.mainAppBottomNav,
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(26),
+              topRight: Radius.circular(26),
             ),
+            boxShadow: [
+              BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 5),
+            ],
           ),
-          Expanded(
-            child: _buildNavItem(
-              context,
-              'PASS',
-              'assets/bottom_image/ticket.png',
-              1,
-            ),
+          child: Row(
+            children: [
+              Expanded(
+                child: _buildNavItem(
+                  context,
+                  'TRANSPORT',
+                  'assets/bottom_image/vector.png',
+                  0,
+                ),
+              ),
+              Expanded(
+                child: _buildNavItem(
+                  context,
+                  'PASS',
+                  'assets/bottom_image/ticket.png',
+                  1,
+                ),
+              ),
+              Expanded(
+                child: _buildNavItem(
+                  context,
+                  'REWARD',
+                  'assets/bottom_image/reward.png',
+                  2,
+                ),
+              ),
+              Expanded(
+                child: _buildNavItem(
+                  context,
+                  'SETTING',
+                  'assets/bottom_image/setting.png',
+                  3,
+                ),
+              ),
+            ],
           ),
-          Expanded(
-            child: _buildNavItem(
-              context,
-              'REWARD',
-              'assets/bottom_image/reward.png',
-              2,
-            ),
-          ),
-          Expanded(
-            child: _buildNavItem(
-              context,
-              'SETTING',
-              'assets/bottom_image/setting.png',
-              3,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
