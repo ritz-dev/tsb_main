@@ -27,7 +27,7 @@ class _SettingsPageState extends State<SettingsPage> {
       backgroundColor: const Color(0xFF0A4DA2), // blue background
       appBar: CreditHomeAppBar(
         title: AppLocalizations.of(context)!.translate('settings'),
-        enableBack: false,
+        enableBack: true,
       ),
       // appBar: AppBar(
       //   title: Text(

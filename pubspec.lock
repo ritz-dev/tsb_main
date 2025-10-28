@@ -511,13 +511,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-<<<<<<< HEAD
       ref: main
-      resolved-ref: a57ca83ac72798b1cd1d0bb0104f16ca3e7f118b
-=======
-      ref: staging
-      resolved-ref: "5b356a6a20270059dbe2473c50ed32be97a4258e"
->>>>>>> staging
+      resolved-ref: a2848cb0c422b544cffdce0a7ec37373e3471b80
       url: "https://github.com/ritz-dev/tsb_mini.git"
     source: git
     version: "1.0.0+1"
