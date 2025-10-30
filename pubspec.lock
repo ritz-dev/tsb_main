@@ -512,7 +512,7 @@ packages:
     description:
       path: "."
       ref: staging3
-      resolved-ref: "06ddbe621aaea090cad59d970f197d7b79909748"
+      resolved-ref: "4d603bb97cb6570c76ac61f392c467bc38bc6ef5"
       url: "https://github.com/ritz-dev/tsb_mini.git"
     source: git
     version: "1.0.0+1"
