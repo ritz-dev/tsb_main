@@ -43,11 +43,15 @@ flutter:
       - assets/bottom_image/setting.png
       - assets/bottom_image/ticket.png
       - assets/bottom_image/vector.png
-      - assets/bottom_image/reward.png
+      - assets/bottom_image/reward.png      
       - assets/image/hop2.png
       - assets/lang/
       - assets/logo/
       - assets/home_image/
+      - assets/bottom_image/transport.svg
+      - assets/bottom_image/pass.svg
+      - assets/bottom_image/reward.svg
+      - assets/bottom_image/setting.svg
 
   fonts:
     - family: FCIconic
