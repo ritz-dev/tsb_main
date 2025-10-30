@@ -64,7 +64,7 @@ class BottomNavigationFrame extends StatelessWidget {
     return GestureDetector(
       onTap: () => _handleNavigation(context, index),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xFF083f8c) : Colors.transparent,
           borderRadius: BorderRadius.circular(18),
@@ -72,11 +72,13 @@ class BottomNavigationFrame extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            PackageAssets.image(
+            PackageAssets.svg(
               iconPath,
+              width: 28,
+              height: 28,
               color: isSelected ? Colors.white : Colors.black,
             ),
-            const SizedBox(height: 4),
+            // const SizedBox(height: 4),
             Text(
               label,
               style: TextStyle(
@@ -118,7 +120,7 @@ class BottomNavigationFrame extends StatelessWidget {
                 child: _buildNavItem(
                   context,
                   'TRANSPORT',
-                  'assets/bottom_image/vector.png',
+                  'assets/bottom_image/transport.svg',
                   0,
                 ),
               ),
@@ -126,7 +128,7 @@ class BottomNavigationFrame extends StatelessWidget {
                 child: _buildNavItem(
                   context,
                   'PASS',
-                  'assets/bottom_image/ticket.png',
+                  'assets/bottom_image/pass.svg',
                   1,
                 ),
               ),
@@ -134,7 +136,7 @@ class BottomNavigationFrame extends StatelessWidget {
                 child: _buildNavItem(
                   context,
                   'REWARD',
-                  'assets/bottom_image/reward.png',
+                  'assets/bottom_image/reward.svg',
                   2,
                 ),
               ),
@@ -142,7 +144,7 @@ class BottomNavigationFrame extends StatelessWidget {
                 child: _buildNavItem(
                   context,
                   'SETTING',
-                  'assets/bottom_image/setting.png',
+                  'assets/bottom_image/setting.svg',
                   3,
                 ),
               ),
